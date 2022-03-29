@@ -1,42 +1,247 @@
-/* CSS Document */
-html {
-	height: 100%;
-	overflow-x: hidden;
+.vagueJs{
+	width: 150px;
+	height: 150px;
+	background-color: orange;
+	transition: .5s;
+	z-index: 10;
 }
-
-body {
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	min-height: 300vh;
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
+}
+header{
+	background-color: transparent;
+	height: 150vh;
+	display: flex;
+	flex-direction: column;
+}
+main{
+	background-color: red;
+	height: 150vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
-.parentsection1 {
+footer{
+	background-color: blue;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/*Section du bateau et du ciel */
+#headerSec1{
+	background-color: transparent;
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+}
+/*Contient, ciel, bateau, montagne, oiseaux*/
+#contentCiel{
+	background-color: #B6E0DE;
+	height: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+#montange{
+	background-color: #B6E0DE;
+	width: 30%;
+	height: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+}
+#bateaux{
+	height: 100%;
+	width: 80%;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	z-index: 2;
 	position: relative;
 }
-
-.section1 {
-	z-index: -10;
+#svgHeaderVague1{
 	position: absolute;
-	top: 0;
-    left: 0;
-	height: 100vh;
-	width: 100vw;
+	bottom: -80px   ;
+	width: 100%;
+	z-index: 1;
 }
 
-.section1bg {
-	height: 100vh;
-	width: 100vw;
+#svgHeaderVague2{
+	position: absolute;
+	bottom: -30px   ;
+	width: 100%;
+	z-index: 2;
+}
+
+#svgHeaderVague3{
+	position: absolute;
+	bottom: -30px   ;
+	width: 100%;
+	z-index: 3;
+}
+
+#svgMontagne{
+	height: 100%;
+	width: 100%;
+}
+#svgBateau{
+	height: 60%;
+	width: 100%;
+	bottom: -60px;
+	left: -150px;
+	position: absolute;
+}
+#oiseaux{
+	background-color: #B6E0DE;
+	height: 100%;
+	width: 10%;
+}
+/*Contient 3 vague*/
+#contentVague{
+	position: relative;
+	height: 20%;
+}
+#contentVague svg{
+	position: absolute;
+}
+/*vague de poissons plus info bulle*/
+#headerSec2{
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#contentPoissons{
+	height: 70%;
+	background-color: #0ABDC4;
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	align-items: center;
+}
+#poissonDiv1{
+	height: 100%;
+	background-image: url("src/poissons.png");
+	background-repeat: repeat;
+	width: 100%;
+	position: relative;
+	z-index: 1  ;
+	left: 0;
+	bottom: -300px ;
+}
+#poissonDiv2{
+	height: 100%;
+	background-image: url("src/poissons.png");
+	background-repeat: repeat;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	left: 0;
+	bottom: -310px ;
+}
+#poissonDiv3{
+	height: 100%;
+	background-image: url("src/poissons.png");
+	background-repeat: repeat;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	left: 0;
+	bottom: -350px ;
+}
+
+#svgPoissons{
+	height: 90%;
+	z-index: 4;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+}
+#contentPoisson{
+	height: 30%;
+	background-color: #0ABDC4;
+}
+#svgPoisson1{
+	width: 100%;
+	height: 70%;
+}
+/*Main, Contient le poule, le bois  et les bras de poulpes*/
+#contentPoulpe{
+	background-color: pink;
+	height: 40%;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+#contentBois{
+	height: 40%;
+	background-color: sandybrown;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+#contentBras{
+	background-color: lightpink;
+	height: 20%;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+#contentBras img {
+	width: 100%;
+}/*Footer titre plus vague 1, 2 et 3 */
+#footerTitre{
+	background-color: orange;
+	height: 10%;
+	text-align: center;
+}
+#footerVague1{
+	background-color: blueviolet;
+	height: 30%;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+#footerVague2 {
+	background-color: midnightblue;
+	height: 30%;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+#footerVague3{
+	background-color: slateblue;
+	height: 30%;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+
+
+
+.parentsection {
+	position: relative;
+	height: 150vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .vagues {
 	width: 100vw;
-	height: 100%; 
+	height: 100%;
 }
 
 #notredame{
 	left: -5%;
 	position: fixed;
-	z-index: 25;
-	
+	z-index: -1;
 	align-items: end;
 
 }
@@ -49,15 +254,9 @@ body {
     height: 100%;
 }
 
-.contentSpan{
-	height: 300px;
-	width: 300px;
-	background-color: orangered;
-}
 
 .vagues1 {
 	 animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-  
 	z-index: 15;
 	position: absolute;
     width: auto;
@@ -66,7 +265,6 @@ body {
 
 .vagues2 {
 	 animation: wave2 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
- 
 	z-index: 20;
 	position: absolute;
     width: auto;
@@ -74,8 +272,6 @@ body {
 }
 
 .vagues3 {
-	
-
 	z-index: 30;
 	position: absolute;
     width: auto;
@@ -83,55 +279,22 @@ body {
 }
 
 
-.section2 {
-	
-	margin: 100vh 0 0 0;  
-	background-color: #0ABDC4;
-	height: 100vh;
-	width: 100vw;
-}
-
-.section3 {
-	background-color: #0B87AB;
-	height: 100vh;
-	width: 100vw;
-}
-
-.section4 {
-	background-color: #284f8a;
-	height: 100vh;
-	width: 100vw;
-}
-
-.section5 {
-	background-color: #373678;
-	height: 100vh;
-	width: 100vw;
-}
 
 @keyframes wave {
-  0% {
-    margin-left: 0;
-  }
-  50% {
-    margin-left: -600px;
-	  margin-right: 600px;
-  }
-	
-	100%{
-		 margin-left: 0;
-	}
+    to{
+        margin-left: 110%;
+    }
 }
 
 @keyframes wave2 {
-  0% {
-    margin-right: 0;
-  }
-  50% {
-    margin-right: -600px;
-	  margin-left: 600px;
-  }
-	100% {
-		  margin-right: 0;
-	}
+    0% {
+        margin-right: 0;
+    }
+    50% {
+        margin-right: -600px;
+        margin-left: 600px;
+    }
+    100% {
+        margin-right: 0;
+    }
 }
